@@ -1,7 +1,8 @@
-let color = "yellow";
+let color = "black";
 let mouseDown = false;
 let dim = 30;
 let isRainbow = false;
+let isBorder = true;
 
 function darkenColor(color) {
     // Parse the RGB color string
@@ -26,11 +27,25 @@ function setColor() {
                 isRainbow = true;
             } else {
                 color = getComputedStyle(e.target).backgroundColor;
+                console.log(color);
                 isRainbow = false;
             }
             console.log(`Color set to: ${color}`);
         });
     })
+}
+
+function toggleBorder(){
+    const grids = document.querySelectorAll(".grid-container div div");
+    grids.forEach((grid) => {
+        if (grid.style.border === "1px solid black"){
+            grid.style.border = "0px";
+            isBorder = false;
+        } else { 
+            grid.style.border = "1px solid black";
+            isBorder = true;
+        }
+    });
 }
 
 function createGrid(dim, gridContainer) {
@@ -40,7 +55,8 @@ function createGrid(dim, gridContainer) {
         gridRow.style.flex = "auto";
         for (let j = 0; j < dim; j++) {
             let grid = document.createElement("div");
-            grid.style.border = "1px solid black";
+            if (isBorder)
+                grid.style.border = "1px solid black";
             gridRow.appendChild(grid);
             grid.style.flex = "auto";
 
@@ -99,7 +115,28 @@ document.addEventListener("DOMContentLoaded", () => {
         createGrid(dim, gridContainer);
         
     }
-    
+    function setDimension() {
+        const gridSize = document.getElementById('grid-size');
+        const submit = document.getElementById('submit');
+        submit.addEventListener('click', (e) => {
+            let input = gridSize.value;
+            let val = parseInt(input);
+            if (!isNaN(val) && val > 0 && val < 101) {
+                dim = val;
+                resetGrid();
+                console.log(dim);
+            } else 
+                alert("Please enter a valid number between 0 and 100");
+        });
+        gridSize.addEventListener("keydown", (e) => {
+            e.key === "Enter" && submit.click();
+        })
+        
+    }
     const wipe = document.getElementById("wipe");
     wipe.addEventListener("click", (e) => {resetGrid()});
+
+    setDimension();
+    const toggle = document.getElementById('borders');
+    toggle.addEventListener("click", toggleBorder);
 });

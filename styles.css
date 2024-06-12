@@ -30,6 +30,13 @@
     gap: 24px;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 200px;
+}
+
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -48,9 +55,9 @@
     border-radius: 40px;
     height: 560px;
     justify-content: space-between;
-    background-color: rgb(204, 204, 204);
+    background: linear-gradient(to right, rgb(221, 221, 221), rgb(165, 165, 165));
+    box-shadow: 5px 5px 5px black;
 }
-
 .colors {
     display: flex;
     flex-direction: column;
@@ -61,61 +68,85 @@
     gap: 4px;
 }
 
-#red {
-    background-color: red;
+#red { 
+    background: linear-gradient(to right, rgb(255, 34, 34), rgb(184, 0, 0));
     height: 40px;
     width: 180px;
     border-radius: 10px;
     margin-top: 10px;
+    background-color: red;
 }
 
 #orange {
-    background-color: orange;
+    background: linear-gradient(to right, rgb(255, 178, 34), rgb(168, 109, 0));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: orange;
 }
 
 #yellow {
-    background-color: yellow;
+    background: linear-gradient(to right, rgb(255, 255, 45), rgb(182, 182, 0));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: yellow;
 }
 
 #green {
-    background-color: green;
+    background: linear-gradient(to right, rgb(0, 196, 0), rgb(0, 77, 0));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: green;
 }
 
 #blue {
-    background-color: blue;
+    background: linear-gradient(to right, rgb(53, 53, 255), rgb(0, 0, 134));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: blue;
 }
 
 #purple {
-    background-color: purple;
+    background: linear-gradient(to right, rgb(184, 0, 184), rgb(75, 0, 75));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: purple;
 }
 
 #black {
-    background-color: black;
+    background: linear-gradient(to right, rgb(63, 63, 63), rgb(0, 0, 0));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: black;
+}
+
+#gray {
+    background: linear-gradient(to right, rgb(155, 155, 155), rgb(73, 73, 73));
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: gray;
 }
 
 #white {
-    background-color: white;
+    background: linear-gradient(to right, white, rgb(192, 192, 192));
     height: 40px;
     width: 180px;
     border-radius: 10px;
+    background-color: white;
+}
+
+#brown {
+    background: linear-gradient(to right, rgb(122, 70, 18), rgb(61, 31, 0));
+    height: 40px; 
+    width: 180px;
+    border-radius: 10px;
+    background-color: rgb(83, 42, 0);
 }
 
 #rainbow {
