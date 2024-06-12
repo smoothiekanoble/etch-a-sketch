@@ -9,7 +9,7 @@
 }
 
 #title {
-    padding: 64px;
+    padding: 48px;
     font-family: "Comic Sans MS", sans-serif;
     font-size: 40px;
 }
@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 32px 32px;
+    padding: 32px 512px 32px 360px;
 }
 
 .leftside {
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     flex: 4;
-
+    gap: 24px;
 }
 
 .grid-container {
@@ -40,7 +40,87 @@
 
 .palette {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1;
+    border: 6px solid black;
+    border-radius: 40px;
+    height: 560px;
+    justify-content: space-between;
+    background-color: rgb(204, 204, 204);
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px;
+    gap: 4px;
+}
+
+#red {
+    background-color: red;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#orange {
+    background-color: orange;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#yellow {
+    background-color: yellow;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#green {
+    background-color: green;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#blue {
+    background-color: blue;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#purple {
+    background-color: purple;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#black {
+    background-color: black;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#white {
+    background-color: white;
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+}
+
+#rainbow {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
 }
